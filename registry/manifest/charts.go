@@ -183,7 +183,7 @@ func (m *Manifests) GetIndex(repoURLPath string) (*repo.IndexFile, error) {
 }
 
 func (m *Manifests) downloadIndex(repoURLPath string) (*repo.IndexFile, error) {
-	url := fmt.Sprintf("https://%s/index.yaml", repoURLPath)
+	url := fmt.Sprintf("http://%s/index.yaml", repoURLPath)
 	if m.config.Debug {
 		m.log.Printf("download index: %s\n", url)
 	}
